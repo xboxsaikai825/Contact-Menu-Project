@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Contact.cpp" />
+    <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="lab3-vinhnguyen.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Time.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Contact.h" />
+    <ClInclude Include="DateTime.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
