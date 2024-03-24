@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Contact.h" />
     <ClInclude Include="DateTime.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Time.h" />
