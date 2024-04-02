@@ -15,11 +15,11 @@ public:
     /* Sort method
     * method to sort list using selection sort
     */
-    void sort();
+    void sort(bool);
 
     /* Search method
     * method to search for a contact
     */
-    void search(string);
+    Contact search(string);
 };
 
