@@ -13,7 +13,7 @@ public:
 	*/
 	Person();
 
-	Person(string, string, string, DateTime, string, string, string, string, string, string, string, string, string);
+	Person(string, string, string, string, string, string, string, string, string, string, string, string);
 
 	/* Get methods
 	* methods to retrieve all attributes of Person
@@ -23,8 +23,6 @@ public:
 	string get_middle_name();
 
 	string get_last_name();
-
-	DateTime get_birthdate();
 
 	string get_address();
 
@@ -53,8 +51,6 @@ public:
 
 	void set_last_name(string);
 
-	void set_birthdate(DateTime);
-
 	void set_address(string);
 
 	void set_city(string);
@@ -82,7 +78,6 @@ private:
 	string first_name;
 	string middle_name;
 	string last_name;
-	DateTime birthdate;
 	string address;
 	string city;
 	string county;

@@ -9,8 +9,8 @@ Contact::Contact()
 	company = "";
 }
 
-Contact::Contact(string i, string ro, string com, string fn, string md, string ln, DateTime ti, string ad, string ci, string co, string st, string zi, string ph1, string ph2, string pro, string em)
-	:Person(fn, md, ln, ti, ad, ci, co, st, zi, ph1, ph2, pro, em) {
+Contact::Contact(string i, string ro, string com, string fn, string md, string ln, string ad, string ci, string co, string st, string zi, string ph1, string ph2, string pro, string em)
+	:Person(fn, md, ln, ad, ci, co, st, zi, ph1, ph2, pro, em) {
 	id = i;
 	role = ro;
 	company = com;
