@@ -132,12 +132,6 @@ public:
     Iterator<T>& operator--();
     Iterator<T>& operator--(int);
 
-    /**
-        overloads operator < & >
-    */
-    bool operator>(const Iterator<T>&);
-    bool operator<(const Iterator<T>&);
-
 private:
     Node<T>* position;
     LinkedList<T>* container;
@@ -168,7 +162,7 @@ void LinkedList<T>::selectionLinked(bool ascending)
 template <typename T>
 void LinkedList<T>::swapNode(Node<T>* x, Node<T>* y)
 {
-    T temp = x->data;
+    int temp = x->data;
     x->data = y->data;
     y->data = temp;
 }
@@ -360,16 +354,6 @@ Iterator<T>& Iterator<T>::operator--(int step) {
         position = position->previous;
     }
     return before_increment;
-}
-
-template <typename T>
-bool Iterator<T>::operator>(const Iterator<T>& other) {
-    return this->position < other.position;
-}
-
-template <typename T>
-bool Iterator<T>::operator<(const Iterator<T>& other) {
-    return this->posiiton > other.position;
 }
 
 #endif
