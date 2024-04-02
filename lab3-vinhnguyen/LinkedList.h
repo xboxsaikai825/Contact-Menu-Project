@@ -2,6 +2,7 @@
 #define LINKED_LIST_H
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -69,6 +70,21 @@ public:
     */
     Iterator<T> end();
 
+    /**
+        Sorts the linked list in ascending order
+    */
+    void selectionLinked();
+
+    /**
+        Swaps two nodes in a linked list
+    */
+    void swapNode(Node<T>*, Node<T>*);
+
+    /**
+        Prints all elements in list
+    */
+    void printLinked();
+
 private:
     Node<T>* first;
     Node<T>* last;
@@ -109,6 +125,46 @@ private:
     LinkedList<T>* container;
     friend class LinkedList<T>;
 };
+
+template <typename T>
+void LinkedList<T>::selectionLinked()
+{
+    Node<T>* key;
+    key = first;
+
+    while (key != nullptr)
+    {
+        Node<T>* temp = key->next;
+        while (temp != nullptr)
+        {
+            if (key->data > temp->data)
+            {
+                swapNode(key, temp);
+            }
+            temp = temp->next;
+        }
+        key = key->next;
+    }
+}
+
+template <typename T>
+void LinkedList<T>::swapNode(Node<T>* x, Node<T>* y)
+{
+    int temp = x->data;
+    x->data = y->data;
+    y->data = temp;
+}
+
+template <typename T>
+void LinkedList<T>::printLinked() {
+    Node<T>* temp = first;
+    while (temp->next != nullptr)
+    {
+        cout << temp->data << endl;
+        temp = temp->next;
+    }
+    cout << temp->data << endl;
+}
 
 template <typename T>
 Node<T>::Node(T element) {
