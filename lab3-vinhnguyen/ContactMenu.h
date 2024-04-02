@@ -1,5 +1,7 @@
 #pragma once
 #include "Menu.h"
+#include "ContactList.h"
+
 class ContactMenu :
     public Menu
 {
@@ -8,6 +10,8 @@ public:
     * constructor to initialize attributes and reads csv
     */
     ContactMenu();
+
+
 
     /* Movement methods
     * methods to move to next or previous contact records
@@ -19,5 +23,8 @@ public:
     void move_previous();
 
     void move_last();
+
+private:
+    ContactList list;
 };
 
