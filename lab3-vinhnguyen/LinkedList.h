@@ -120,6 +120,18 @@ public:
     */
     bool equals(Iterator other) const;
 
+    /**
+        overloads operator++
+    */
+    Iterator<T>& operator++();
+    Iterator<T>& operator++(int);
+
+    /**
+        overloads operator--
+    */
+    Iterator<T>& operator--();
+    Iterator<T>& operator--(int);
+
 private:
     Node<T>* position;
     LinkedList<T>* container;
@@ -314,6 +326,34 @@ void Iterator<T>::previous() {
 template <typename T>
 bool Iterator<T>::equals(Iterator<T> other) const {
     return position == other.position;
+}
+
+template <typename T>
+Iterator<T>& Iterator<T>::operator++() {
+    position = position->next;
+}
+
+template <typename T>
+Iterator<T>& Iterator<T>::operator++(int step) {
+    Iterator before_increment = *this;
+    for (int i = 0; i < step; i++) {
+        position = position->next;
+    }
+    return before_increment;
+}
+
+template <typename T>
+Iterator<T>& Iterator<T>::operator--() {
+    position = position->previous;
+}
+
+template <typename T>
+Iterator<T>& Iterator<T>::operator--(int step) {
+    Iterator before_increment = *this;
+    for (int i = 0; i < step; i++) {
+        position = position->previous;
+    }
+    return before_increment;
 }
 
 #endif
