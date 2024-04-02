@@ -128,6 +128,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Contact.cpp" />
+    <ClCompile Include="ContactList.cpp" />
+    <ClCompile Include="ContactMenu.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="lab3-vinhnguyen.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -136,6 +138,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contact.h" />
+    <ClInclude Include="ContactList.h" />
+    <ClInclude Include="ContactMenu.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Menu.h" />

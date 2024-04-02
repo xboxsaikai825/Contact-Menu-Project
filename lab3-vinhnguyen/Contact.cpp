@@ -31,3 +31,12 @@ void Contact::set_id(string i) { id = i; }
 void Contact::set_role(string ro) { role = ro; }
 
 void Contact::set_company(string comp) { company = comp; }
+
+// to string method
+
+void Contact::to_string() {
+	cout << id << endl;
+	cout << role << endl;
+	cout << company << endl;
+	Person::to_string();
+}

@@ -27,6 +27,11 @@ public:
 	void set_role(string);
 
 	void set_company(string);
+
+	/* To string method
+	* method to print out all info
+	*/
+	void to_string();
 private:
 	string id;
 	string role;
