@@ -40,3 +40,11 @@ void Contact::to_string() {
 	cout << company << endl;
 	Person::to_string();
 }
+
+// operator overloads
+
+bool Contact::operator==(const Contact& other) { return this->id == other.id; }
+
+bool Contact::operator>(const Contact& other) { return this->id > other.id; }
+
+bool Contact::operator<(const Contact& other) { return this->id < other.id; }

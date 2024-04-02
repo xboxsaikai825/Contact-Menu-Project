@@ -32,6 +32,14 @@ public:
 	* method to print out all info
 	*/
 	void to_string();
+
+	/* Operator overload
+	* functions to overload ==, < and >
+	*/
+	bool operator==(const Contact&);
+	bool operator>(const Contact&);
+	bool operator<(const Contact&);
+
 private:
 	string id;
 	string role;

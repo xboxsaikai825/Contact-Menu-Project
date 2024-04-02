@@ -71,19 +71,19 @@ public:
     Iterator<T> end();
 
     /**
+        Prints all elements in list
+    */
+    void printLinked();
+
+    /**
         Sorts the linked list in ascending order
     */
-    void selectionLinked();
+    void selectionLinked(bool);
 
     /**
         Swaps two nodes in a linked list
     */
     void swapNode(Node<T>*, Node<T>*);
-
-    /**
-        Prints all elements in list
-    */
-    void printLinked();
 
 private:
     Node<T>* first;
@@ -139,7 +139,7 @@ private:
 };
 
 template <typename T>
-void LinkedList<T>::selectionLinked()
+void LinkedList<T>::selectionLinked(bool ascending)
 {
     Node<T>* key;
     key = first;
@@ -149,7 +149,7 @@ void LinkedList<T>::selectionLinked()
         Node<T>* temp = key->next;
         while (temp != nullptr)
         {
-            if (key->data > temp->data)
+            if ((key->data > temp->data) == ascending)
             {
                 swapNode(key, temp);
             }
