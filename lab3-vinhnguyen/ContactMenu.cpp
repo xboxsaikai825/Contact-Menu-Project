@@ -4,7 +4,7 @@
 #include <iomanip>
 
 string const FILENAME = "contacts_data.csv";
-int const WIDTH = 15;
+int const WIDTH = 30;
 
 enum CONTACT_MENU_OPTION {
 	CONTACT_LIST = '1',
@@ -49,23 +49,23 @@ void ContactMenu::doList() {
 
 	cout << setw(WIDTH) << left << "Id";
 	cout << setw(WIDTH) << left << "First";
-	cout << setw(WIDTH) << left << "Middle";
 	cout << setw(WIDTH) << left << "Last";
 	cout << setw(WIDTH) << left << "Role";
 	cout << setw(WIDTH) << left << "Company";
-	cout << setw(WIDTH) << left << "Address";
-	cout << setw(WIDTH) << left << "City";
-	cout << setw(WIDTH) << left << "County";
-	cout << setw(WIDTH) << left << "State";
-	cout << setw(WIDTH) << left << "Zip";
 	cout << setw(WIDTH) << left << "Phone 1";
-	cout << setw(WIDTH) << left << "Phone 2";
-	cout << setw(WIDTH) << left << "Email" << endl;
+	cout << setw(WIDTH) << left << "Email";
+	cout << endl;
 	Iterator<Contact> iter = list.begin();
-	iter.get().to_string();
 	for (iter; iter < list.end(); ++iter) {
 		Contact contact = iter.get();
-		contact.to_string();
+		cout << setw(WIDTH) << left << contact.get_id();
+		cout << setw(WIDTH) << left << contact.get_first_name();
+		cout << setw(WIDTH) << left << contact.get_last_name();
+		cout << setw(WIDTH) << left << contact.get_role();
+		cout << setw(WIDTH) << left << contact.get_company();
+		cout << setw(WIDTH) << left << contact.get_phone1();
+		cout << setw(WIDTH) << left << contact.get_email();
+		cout << endl;
 	}
 	cout << endl;
 }
