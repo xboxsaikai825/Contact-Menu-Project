@@ -9,10 +9,8 @@
 
 
 int main() {
-	//DateTime time(10, 1, 32, 32, 32, 32);
-	//Contact test1("1001", "admin", "PG&E", "vinh", "thanh", "nguyen", time, "3245 santa", "union", "alameda", "california", "94587", "510737", "", "he/her", "xbox@gmail.com");
 	ContactMenu t1;
-
+	t1.get_input();
 
 	return 0;
 }

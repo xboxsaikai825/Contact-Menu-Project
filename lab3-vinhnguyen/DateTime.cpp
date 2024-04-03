@@ -16,7 +16,7 @@ DateTime::DateTime(string date_time)
 	year = 0;
 }
 
-DateTime::DateTime(int year, int day, int month, int hour, int minute, int second)
+DateTime::DateTime(int month, int day, int year, int hour, int minute, int second)
 	: Time(hour, minute, second) {
 	this->year = year;
 	this->day = day;

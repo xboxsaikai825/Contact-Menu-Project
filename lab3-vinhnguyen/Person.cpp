@@ -7,6 +7,7 @@ Person::Person() {
 	middle_name = "";
 	last_name = "";
 	DateTime empty;
+	birthdate = empty;
 	address = "";
 	city = "";
 	county = "";
@@ -18,10 +19,11 @@ Person::Person() {
 	email = "";
 }
 
-Person::Person(string fn, string md, string ln, string ad, string ci, string co, string st, string zi, string ph1, string ph2, string pro, string em) {
+Person::Person(string fn, string md, string ln, DateTime ti, string ad, string ci, string co, string st, string zi, string ph1, string ph2, string pro, string em) {
 	first_name = fn;
 	middle_name = md;
 	last_name = ln;
+	birthdate = ti;
 	address = ad;
 	city = ci;
 	county = co;
@@ -40,6 +42,8 @@ string Person::get_first_name() { return first_name; }
 string Person::get_middle_name() { return middle_name; }
 
 string Person::get_last_name() { return last_name; }
+
+DateTime Person::get_birthdate() { return birthdate; }
 
 string Person::get_address() { return address; }
 
@@ -67,6 +71,8 @@ void Person::set_middle_name(string mn) { middle_name = mn; }
 
 void Person::set_last_name(string ln) { last_name = ln; }
 
+void Person::set_birthdate(DateTime date) { birthdate = date; }
+
 void Person::set_address(string ad) { address = ad; }
 
 void Person::set_city(string ci) { city = ci; }
@@ -91,6 +97,7 @@ void Person::to_string() {
 	cout << first_name << endl;
 	cout << middle_name << endl;
 	cout << last_name << endl;
+	this->birthdate.toString();
 	cout << address << endl;
 	cout << city << endl;
 	cout << county << endl;

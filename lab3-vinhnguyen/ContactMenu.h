@@ -11,18 +11,37 @@ public:
     */
     ContactMenu();
 
+    void get_input();
 
-
-    /* Movement methods
-    * methods to move to next or previous contact records
+    /* List method
+    * method to show all contacts 
     */
-    void move_first();
-    
-    void move_next();
+    void doList();
 
-    void move_previous();
+    /* View method
+    * method to view a contact's details
+    */
+    void doView();
 
-    void move_last();
+    /* Add method
+    * method to add contact
+    */
+    void doAdd();
+
+    /* Edit method
+    * method to edit contact
+    */
+    void doEdit();
+
+    /* Delete method
+    * method to delete contact
+    */
+    void doDelete();
+
+    /* Exit method
+    * method to exit program
+    */
+    void doExit();
 
 private:
     ContactList list;
