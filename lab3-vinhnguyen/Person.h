@@ -78,7 +78,7 @@ public:
 	*/
 	void to_string();
 
-private:
+protected:
 	string first_name;
 	string middle_name;
 	string last_name;

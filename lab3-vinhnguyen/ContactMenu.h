@@ -45,5 +45,12 @@ public:
 
 private:
     ContactList list;
+
+    /* Read and Write methods
+    * methods to read and write to csv
+    */
+    void read_csv();
+
+    void write_csv();
 };
 

@@ -1,15 +1,18 @@
 #include "Contact.h"
+#include <iomanip>
+
+int const WIDTH = 15;
 
 // constructors
 
 Contact::Contact()
 	:Person() {
-	id = "69420";
+	id = "0";
 	role = "";
 	company = "";
 }
 
-Contact::Contact(string i, string ro, string com, string fn, string md, string ln, DateTime ti, string ad, string ci, string co, string st, string zi, string ph1, string ph2, string pro, string em)
+Contact::Contact(string i, string fn, string md, string ln, string ro, string com, DateTime ti, string ad, string ci, string co, string st, string zi, string ph1, string ph2, string pro, string em)
 	:Person(fn, md, ln, ti, ad, ci, co, st, zi, ph1, ph2, pro, em) {
 	id = i;
 	role = ro;
@@ -35,10 +38,21 @@ void Contact::set_company(string comp) { company = comp; }
 // to string method
 
 void Contact::to_string() {
-	cout << id << endl;
-	cout << role << endl;
-	cout << company << endl;
-	Person::to_string();
+	cout << setw(WIDTH) << left << id;
+	cout << setw(WIDTH) << left << first_name;
+	cout << setw(WIDTH) << left << middle_name;
+	cout << setw(WIDTH) << left << last_name;
+	cout << setw(WIDTH) << left << role;
+	cout << setw(WIDTH) << left << company;
+	cout << setw(WIDTH) << left << address;
+	cout << setw(WIDTH) << left << city;
+	cout << setw(WIDTH) << left << county;
+	cout << setw(WIDTH) << left << state;
+	cout << setw(WIDTH) << left << zip;
+	cout << setw(WIDTH) << left << phone1;
+	cout << setw(WIDTH) << left << phone2;
+	cout << setw(WIDTH) << left << pronouns;
+	cout << setw(WIDTH) << left << email;
 }
 
 // operator overloads

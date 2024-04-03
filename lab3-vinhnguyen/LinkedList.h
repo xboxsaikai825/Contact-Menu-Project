@@ -123,13 +123,13 @@ public:
     /**
         overloads operator++
     */
-    Iterator<T>& operator++();
+    void operator++();
     Iterator<T>& operator++(int);
 
     /**
         overloads operator--
     */
-    Iterator<T>& operator--();
+    void operator--();
     Iterator<T>& operator--(int);
 
     /**
@@ -335,7 +335,7 @@ bool Iterator<T>::equals(Iterator<T> other) const {
 }
 
 template <typename T>
-Iterator<T>& Iterator<T>::operator++() {
+void Iterator<T>::operator++() {
     position = position->next;
 }
 
@@ -349,7 +349,7 @@ Iterator<T>& Iterator<T>::operator++(int step) {
 }
 
 template <typename T>
-Iterator<T>& Iterator<T>::operator--() {
+void Iterator<T>::operator--() {
     position = position->previous;
 }
 
@@ -371,5 +371,4 @@ template <typename T>
 bool Iterator<T>::operator<(const Iterator<T>& other) {
     return this->position > other.position;
 }
-
 #endif

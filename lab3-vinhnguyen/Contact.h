@@ -8,7 +8,7 @@ public:
 	*/
 	Contact();
 
-	Contact(string, string, string, string, string, string, DateTime, string, string, string, string, string, string, string, string, string);
+	Contact(string i, string fn, string md, string ln, string ro, string com, DateTime ti, string ad, string ci, string co, string st, string zi, string ph1, string ph2, string pro, string em);
 
 	/* Get methods
 	* methods to retrieve Contact attributes

@@ -1,4 +1,7 @@
 #include "Person.h"
+#include <iomanip>
+
+int const WIDTH = 15;
 
 // constructors
 
@@ -94,18 +97,17 @@ void Person::set_email(string em) { email = em; }
 // to string method
 
 void Person::to_string() {
-	cout << first_name << endl;
-	cout << middle_name << endl;
-	cout << last_name << endl;
-	this->birthdate.toString();
-	cout << address << endl;
-	cout << city << endl;
-	cout << county << endl;
-	cout << state << endl;
-	cout << zip << endl;
-	cout << phone1 << endl;
-	cout << phone2 << endl;
-	cout << pronouns << endl;
-	cout << email << endl;
+	cout << setw(WIDTH) << left << first_name;
+	cout << setw(WIDTH) << left << middle_name;
+	cout << setw(WIDTH) << left << last_name;
+	cout << setw(WIDTH) << left << address;
+	cout << setw(WIDTH) << left << city;
+	cout << setw(WIDTH) << left << county;
+	cout << setw(WIDTH) << left << state;
+	cout << setw(WIDTH) << left << zip;
+	cout << setw(WIDTH) << left << phone1;
+	cout << setw(WIDTH) << left << phone2;
+	cout << setw(WIDTH) << left << pronouns;
+	cout << setw(WIDTH) << left << email;
 }
 
