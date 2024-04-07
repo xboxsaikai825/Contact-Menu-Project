@@ -138,6 +138,14 @@ public:
     bool operator>(const Iterator<T>&);
     bool operator<(const Iterator<T>&);
 
+
+    /**
+        overloads operator = & !=
+    */
+    Iterator<T> operator=(Iterator<T>);
+    bool operator!=(Iterator<T>);
+
+
 private:
     Node<T>* position;
     LinkedList<T>* container;
@@ -364,11 +372,23 @@ Iterator<T>& Iterator<T>::operator--(int step) {
 
 template <typename T>
 bool Iterator<T>::operator>(const Iterator<T>& other) {
-    return this->position < other.position;
+    return this->position > other.position;
 }
 
 template <typename T>
 bool Iterator<T>::operator<(const Iterator<T>& other) {
-    return this->position > other.position;
+    return this->position < other.position;
+}
+
+template <typename T>
+Iterator<T> Iterator<T>::operator=(Iterator<T> other) {
+    this->position = other.position;
+    this->container = other.container;
+    return other;
+}
+
+template <typename T>
+bool Iterator<T>::operator!=(Iterator<T> other) {
+    return ((this->position != other.position) || this->container != other.container);
 }
 #endif

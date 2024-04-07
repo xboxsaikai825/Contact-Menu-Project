@@ -38,21 +38,21 @@ void Contact::set_company(string comp) { company = comp; }
 // to string method
 
 void Contact::to_string() {
-	cout << setw(WIDTH) << left << id;
-	cout << setw(WIDTH) << left << first_name;
-	cout << setw(WIDTH) << left << middle_name;
-	cout << setw(WIDTH) << left << last_name;
-	cout << setw(WIDTH) << left << role;
-	cout << setw(WIDTH) << left << company;
-	cout << setw(WIDTH) << left << address;
-	cout << setw(WIDTH) << left << city;
-	cout << setw(WIDTH) << left << county;
-	cout << setw(WIDTH) << left << state;
-	cout << setw(WIDTH) << left << zip;
-	cout << setw(WIDTH) << left << phone1;
-	cout << setw(WIDTH) << left << phone2;
-	cout << setw(WIDTH) << left << pronouns;
-	cout << setw(WIDTH) << left << email;
+	cout << "Id: " << id << endl;
+	cout << "First name: " << first_name << endl;
+	cout << "Middle Name: " << middle_name << endl;
+	cout << "Last Name: " << last_name << endl;
+	cout << "Role: " << role << endl;
+	cout << "Company: " << company << endl;
+	cout << "Address: " << address << endl;
+	cout << "City: " << city << endl;
+	cout << "County: " << county << endl;
+	cout << "State: " << state << endl;
+	cout << "Zip: " << zip << endl;
+	cout << "Primary Phone: " << phone1 << endl;
+	cout << "Secondary Phone: " << phone2 << endl;
+	cout << pronouns;
+	cout << "Email: " << email << endl;
 }
 
 // operator overloads

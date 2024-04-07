@@ -1,43 +1,25 @@
 #include "ContactList.h"
 
-// Constructor
+// constructor
 ContactList::ContactList() 
  : LinkedList() {
-	iter = this->begin();
 }
 
-// Sort method
+// sort method
 void ContactList::sort(bool ascending) {
 	this->selectionLinked(ascending);
 }
 
-// Search method
-Contact ContactList::search(string id) {
+// search method
+int ContactList::search(string id) {
+	int position = 0;
 	Contact found;
-	Iterator<Contact> iter;
-	iter.equals(this->begin());
-	for (iter; iter > this->end(); iter++) {
+	for (auto iter = this->begin(); iter != this->end(); ++iter) {
+		position++;
 		if (iter.get().get_id() == id) {
-			found = iter.get();
-			return found;
+			position--;
+			return position;
 		}
 	}
-	return found;
-}
-
-//Movement methods
-void ContactList::move_first() {
-	iter = this->begin();
-}
-
-void ContactList::move_next() {
-	iter++;
-}
-
-void ContactList::move_previous() {
-	iter--;
-}
-
-void ContactList::move_last() {
-	iter = this->end();
+	return -1;
 }

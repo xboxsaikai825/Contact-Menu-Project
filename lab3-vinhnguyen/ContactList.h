@@ -20,20 +20,6 @@ public:
     /* Search method
     * method to search for a contact
     */
-    Contact search(string);
-
-    /* Movement methods
-    * methods to move to next or previous contact records
-    */
-    void move_first();
-
-    void move_next();
-
-    void move_previous();
-
-    void move_last();
-
-private:
-    Iterator<Contact> iter;
+    int search(string);
 };
 

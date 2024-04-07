@@ -13,8 +13,18 @@ public:
 
     void get_input();
 
+private:
+    ContactList list;
+
+    /* Read and Write methods
+    * methods to read and write to csv
+    */
+    void read_csv();
+
+    void write_csv();
+
     /* List method
-    * method to show all contacts 
+    * method to show all contacts
     */
     void doList();
 
@@ -43,14 +53,18 @@ public:
     */
     void doExit();
 
-private:
-    ContactList list;
-
-    /* Read and Write methods
-    * methods to read and write to csv
+    /* Movement methods
+    * methods to move iterator
     */
-    void read_csv();
+    void move_first();
 
-    void write_csv();
+    void move_next();
+
+    void move_previous();
+
+    void move_last();
+
+private:
+    Iterator<Contact> it;
 };
 
